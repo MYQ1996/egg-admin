@@ -7,10 +7,7 @@ class HomeController extends Controller {
 
     const { ctx } = this;
 
-    console.log('====================返回================');
-    console.log(await ctx.service.reptile.login(201530193));
-    console.log('====================================');
-    ctx.body = '213';
+    ctx.body = await ctx.service.reptile.login(201530193);
   }
 }
 
