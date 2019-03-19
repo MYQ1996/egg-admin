@@ -20,7 +20,8 @@ class HomeController extends Controller {
     //   age,
     // } = ctx.params;
     // ctx.body = age;
-    ctx.body = '12';
+
+    ctx.body = '21';
 
     // ctx.body = 'Hello world';
     // const ctx = this.ctx;
