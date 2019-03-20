@@ -6,8 +6,16 @@ class HomeController extends Controller {
   async index() {
 
     const { ctx } = this;
-
-    ctx.body = await ctx.service.reptile.login(201530193);
+    for (let index = 201830000; index <= 201839999; index++) {
+      console.log(`====================${index}================`);
+      console.log(((Number(String(index).substring(5)) / 9999) * 100).toFixed(2));
+      console.log('============================================');
+      const student = await ctx.service.reptile.login(index);
+      if (student.code === 0) {
+        await ctx.service.reptile.insert(student.message);
+      }
+    }
+    ctx.body = 0;
   }
 }
 
