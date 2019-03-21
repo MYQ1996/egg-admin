@@ -16,12 +16,15 @@ class HomeController extends Controller {
     // ctx.body = queryObj;
 
     // 通过中间件获取get 请求
-    // const {
-    //   age,
-    // } = ctx.params;
-    // ctx.body = age;
+    const {
+      age,
+    } = ctx.params;
+    console.log('====================================');
+    console.log(age);
+    console.log('====================================');
+    ctx.body = '12';
 
-    ctx.body = '21';
+    // ctx.body = '21';
 
     // ctx.body = 'Hello world';
     // const ctx = this.ctx;
