@@ -49,6 +49,12 @@ module.exports = appInfo => {
     'params',
   ];
 
+  config.alinode = {
+    // 从 `Node.js 性能平台` 获取对应的接入参数
+    appid: '79019',
+    secret: 'ca8351573fb07faed40c12cd53cee89e044451c6',
+  };
+
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1552980223880_5344';
 
