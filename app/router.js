@@ -9,4 +9,5 @@ module.exports = app => {
   router.post('/', controller.home.index);
   router.get('/news', controller.news.list);
   router.get('/reptile', controller.reptile.index);
+  router.get('/code', controller.code.index);
 };
