@@ -19,10 +19,9 @@ class HomeController extends Controller {
     const {
       age,
     } = ctx.params;
-    console.log('====================================');
-    console.log(age);
-    console.log('====================================');
-    ctx.body = '12';
+    const user = await ctx.service.user.insertGps(ctx.ip); //查询一条
+
+    ctx.body = "成功";
 
     // ctx.body = '21';
 

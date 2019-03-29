@@ -18,6 +18,14 @@ class UserService extends Service {
     // 判断： result.affectedRows === 1
   }
 
+  async insertGps(ip) {
+    const result = await this.app.mysql.insert('gps', {
+      ip: ip,
+    });
+    return { result };
+    // 判断： result.affectedRows === 1
+  }
+
   async findList() {
     const result = await this.app.mysql.select('user', {
       columns: [ 'id', 'name' ], // 查询字段，全部查询则不写，相当于查询*

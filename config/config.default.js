@@ -16,13 +16,13 @@ module.exports = appInfo => {
     // 单数据库信息配置
     client: {
       // host
-      host: 'localhost',
+      host: '123.206.177.252',
       // 端口号
       port: '3306',
       // 用户名
-      user: 'root',
+      user: 'egg',
       // 密码
-      password: '',
+      password: '57484279',
       // 数据库名
       database: 'egg',
     },
