@@ -9,7 +9,19 @@
 
 const Controller = require('egg').Controller;
 class dataCenterController extends Controller {
-    async index() {
+
+    //添加表
+    async newTable() {
+
+    }
+
+    //增加字段接口
+    async addTableField(){
+
+    }
+
+    //删除字段接口
+    async deleTableField(){
 
     }
 }

@@ -9,7 +9,19 @@
 
 const Controller = require('egg').Controller;
 class InfoController extends Controller {
-    async index() {
+    async checkField() {
+
+    }
+
+    async addInfos() {
+
+    }
+    
+    async deleInfos() {
+
+    }
+
+    async updateInfos() {
 
     }
 }

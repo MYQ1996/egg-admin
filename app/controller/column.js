@@ -9,9 +9,16 @@
 
 const Controller = require('egg').Controller;
 class ColumnController extends Controller {
-    async index() {
+    // 查询所有的表
+    async CheckTableList() {
 
     }
+
+    // 查询所有的表
+    async CheckTable() {
+
+    }
+    
 }
 
 module.exports = ColumnController;
