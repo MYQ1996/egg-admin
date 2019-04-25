@@ -37,11 +37,11 @@ module.exports = appInfo => {
       enable: false,
       ignoreJSON: true,
     },
-    domainWhiteList: [ 'http://www.baidu.com' ], // 配置白名单
+    // domainWhiteList: [ 'http://www.baidu.com' ], // 配置白名单
   };
 
   config.cors = {
-    // origin: '*',//允许所有跨域访问，注释掉则允许上面 白名单 访问
+    origin: '*',//允许所有跨域访问，注释掉则允许上面 白名单 访问
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
 

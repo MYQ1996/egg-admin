@@ -21,9 +21,9 @@ class HomeController extends Controller {
     } = ctx.params;
     // const user = await ctx.service.user.insertGps(ctx.ip); //查询一条
 
-    console.log('====================================');
-    console.log(ctx.session.code);
-    console.log('====================================');
+    // console.log('====================================');
+    // console.log(ctx.session);
+    // console.log('====================================');
     
     ctx.body = "成功";
 
