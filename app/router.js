@@ -4,8 +4,68 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
-  const { router, controller } = app;
+  const { router, controller,swagger } = app;
   router.get('/', controller.home.index);
+  swagger.get('/', {
+    tags: [
+      'role',
+    ],
+    summary: 'search role by page',
+    description: '',
+    parameters: [{
+        in: 'query',
+        name: 'name',
+        description: 'role\'s name',
+      },
+      {
+        in: 'query',
+        name: 'pageIndex',
+        description: 'pageIndex',
+      },
+      {
+        in: 'query',
+        name: 'pageSize',
+        description: 'pageSize',
+      },
+    ],
+    responses: {
+      200: {
+        description: 'SUCCEED',
+        schema: {
+          type: 'object',
+          properties: {
+            status: {
+              type: 'string',
+              description: 'status',
+            },
+            datas: {
+              type: 'array',
+              description: 'result datas',
+              properties: {
+                token: {
+                  type: 'string',
+                  description: 'token',
+                },
+              },
+            },
+            pageIndex: {
+              type: 'number',
+              description: 'pageIndex',
+            },
+            pageSize: {
+              type: 'number',
+              description: 'pageSize',
+            },
+            totalCount: {
+              type: 'number',
+              description: 'totalCount',
+            },
+          },
+        },
+      },
+    },
+  });
+
   router.post('/', controller.home.index);
 
   // 获取验证码

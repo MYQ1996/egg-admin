@@ -22,3 +22,8 @@ exports.alinode = {
   enable: true,
   package: 'egg-alinode',
 };
+
+exports.swagger2 = {
+  enable: true,
+  package: 'egg-swagger2',
+};
